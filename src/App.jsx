@@ -1,52 +1,12 @@
-import React from 'react';
+import MyPassword from "./components/getPassword";
 
-import Instructions from './Instructions';
-
-import './App.css';
-
-
-export default App;
-
-
-const displayEmojiName = event => alert(event.target.id);
-const emojis = [
-  {
-    emoji: '😀',
-    name: "test grinning face"
-  },
-  {
-    emoji: '🎉',
-    name: "party popper"
-  },
-  {
-    emoji: '💃',
-    name: "woman dancing"
-  }
-];
+export default App
 
 function App() {
-  const greeting = "greeting";
-  const displayAction = false;
-  return(
-    <div className="container">
-      <h1 id={greeting}>Hello, World</h1>
-      {displayAction && <p>I am writing JSX</p>}
-      <Instructions />
-      <Instructions />
-      <ul>
-        {
-          emojis.map(emoji => (
-            <li key={emoji.name}>
-              <button
-                onClick={displayEmojiName}
-              >
-                <span role="img" aria-label={emoji.name} id={emoji.name}>{emoji.emoji}</span>
-              </button>
-            </li>
-          ))
-        }
-      </ul>
+  
+  return (
+<div className='App'>
+      <MyPassword />
     </div>
   )
-}
-
+  }
